@@ -8,6 +8,7 @@ class Calculator {
   }
 
   initialize() {
+    debugger;
     this.screen.readOnly = true;
     this.addEventListeners();
     this.addKeyboardListeners();
@@ -19,6 +20,7 @@ class Calculator {
     });
   }
   addKeyboardListeners() {
+    debugger;
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Backspace') {
         this.handleBackspace();
@@ -51,6 +53,7 @@ class Calculator {
       this.screenValue = result.toString();
       this.updateScreenValue();
     } catch (error) {
+      console.log(this.screenValue);
       this.handleError();
     }
   }
